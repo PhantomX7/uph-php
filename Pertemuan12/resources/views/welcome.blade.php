@@ -68,7 +68,17 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/admin') }}">Home</a>
+                        <a href="{{ url('/admin') }}">Admin</a>
+                        @if (Auth::user()->masterproduct)
+                        <a href="{{route('masterproduct')}}"><i class="fa"></i>Master Product</a>
+                        @endif
+                        @if (Auth::user()->mastertransaction)
+                        <a href="{{route('mastertransaction')}}"><i class="fa"></i>Master Transaction</a>
+                        @endif
+                        @if (Auth::user()->transactiondetail)
+                        <a href="{{route('transactiondetail')}}"><i class="fa"></i>Transaction Detail</a>
+                        @endif
+                        <a href="{{ url('/logout') }}">Logout</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 

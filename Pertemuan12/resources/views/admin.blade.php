@@ -30,7 +30,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <style>  
+    <style>
         /* The switch - the box around the slider */
        .switch {
        position: relative;
@@ -38,10 +38,10 @@
        width: 60px;
        height: 34px;
        }
-       
+
        /* Hide default HTML checkbox */
        .switch input {display:none;}
-       
+
        /* The slider */
        .slider {
        position: absolute;
@@ -54,7 +54,7 @@
        -webkit-transition: .4s;
        transition: .4s;
        }
-       
+
        .slider:before {
        position: absolute;
        content: "";
@@ -66,26 +66,26 @@
        -webkit-transition: .4s;
        transition: .4s;
        }
-       
+
        input:checked + .slider {
        background-color: #2196F3;
        }
-       
+
        input:focus + .slider {
        box-shadow: 0 0 1px #2196F3;
        }
-       
+
        input:checked + .slider:before {
        -webkit-transform: translateX(26px);
        -ms-transform: translateX(26px);
        transform: translateX(26px);
        }
-       
+
        /* Rounded sliders */
        .slider.round {
        border-radius: 34px;
        }
-       
+
        .slider.round:before {
        border-radius: 50%;
        }
@@ -115,13 +115,13 @@
                             <a href="{{route('admin')}}"><i class="fa"></i> Admin Panel</a>
                         </li>
                         <li>
-                            <a href="{{route('masterproduct')}}"><i class="fa"></i> Show Master Product</a>
+                            <a href="{{route('masterproduct')}}"><i class="fa"></i>Master Product</a>
                         </li>
                         <li>
-                            <a href="{{route('mastertransaction')}}"><i class="fa"></i> Show Master Transaction</a>
+                            <a href="{{route('mastertransaction')}}"><i class="fa"></i>Master Transaction</a>
                         </li>
                         <li>
-                            <a href="{{route('transactiondetail')}}"><i class="fa"></i> Show Transaction Detail</a>
+                            <a href="{{route('transactiondetail')}}"><i class="fa"></i>Transaction Detail</a>
                         </li>
                         <li>
                             <a href="{{route('logout')}}"><i class="fa"></i> Logout</a>
@@ -149,7 +149,7 @@
                         <td>Master Product</td>
                         <td>Master Transaction</td>
                         <td>Transaction Detail</td>
-                    </tr>  
+                    </tr>
                     @foreach ($users as $user)
                         <tr>
                             <td>{{$user->full_name}}</td>
